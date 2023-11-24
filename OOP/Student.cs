@@ -43,13 +43,15 @@ internal class Student
     //}
     #endregion
 
+    //Vừa là field vừa là property
     public int? Id { get; set; }
     public string? Fullname { get; set; }
     public bool? Gender { get; set; }
-    public DateOnly? dob { get; set; }
+    public DateTime? Dob { get; set; }
+    public DateOnly? test { get; set; }
 
     public override string ToString()
     {
-        return $"{{{nameof(Id)}={Id.ToString()}, {nameof(Fullname)}={Fullname}, {nameof(Gender)}={Gender.ToString()}, {nameof(dob)}={dob.ToString()}}}";
+        return $"{{{nameof(Id)}={Id.ToString()}, {nameof(Fullname)}={Fullname}, {nameof(Gender)}={Gender.ToString()}, {nameof(Dob)}={Dob.ToString()}, {nameof(test)}={test.ToString()}}}";
     }
 }
