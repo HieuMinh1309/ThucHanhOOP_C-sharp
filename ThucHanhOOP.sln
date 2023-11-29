@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcPoly", "CalcPoly\CalcPo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceCSharp", "InterfaceCSharp\InterfaceCSharp.csproj", "{12DA0CB3-901C-44D4-AA7B-5482DAE6272D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ListCSharp", "ListCSharp", "{E03E5396-EAA5-495C-B11B-FEFDF7BBE419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListAndLinq", "ListAndLinq\ListAndLinq.csproj", "{15736084-5276-4D9E-AB89-320EB89B6F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{12DA0CB3-901C-44D4-AA7B-5482DAE6272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12DA0CB3-901C-44D4-AA7B-5482DAE6272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12DA0CB3-901C-44D4-AA7B-5482DAE6272D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15736084-5276-4D9E-AB89-320EB89B6F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15736084-5276-4D9E-AB89-320EB89B6F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15736084-5276-4D9E-AB89-320EB89B6F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15736084-5276-4D9E-AB89-320EB89B6F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{98A7675A-D3A1-47D2-8C4B-F1E20C44E04F} = {349B1830-F596-41CF-9880-2D7A061D9607}
 		{F0FCB00C-5378-4811-9837-3C4721CDF13B} = {8BDAA3BF-4A36-460B-94DF-96BF68EF4CF7}
 		{12DA0CB3-901C-44D4-AA7B-5482DAE6272D} = {8BDAA3BF-4A36-460B-94DF-96BF68EF4CF7}
+		{15736084-5276-4D9E-AB89-320EB89B6F70} = {E03E5396-EAA5-495C-B11B-FEFDF7BBE419}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDC0E456-08A4-4CE4-9D76-B7847707446C}
