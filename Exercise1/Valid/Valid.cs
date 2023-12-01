@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise1;
+namespace Exercise1.Valid;
 public class Valid<T>
 {
     public static T CheckCR(string message)
@@ -25,7 +25,7 @@ public class Valid<T>
             {
                 var str = Console.ReadLine();
                 //guard clause - design pattern
-                if (String.IsNullOrEmpty(str))
+                if (string.IsNullOrEmpty(str))
                     throw new Exception("Can't be null or empty, Please enter: ");
 
                 switch (type)
@@ -41,7 +41,7 @@ public class Valid<T>
                             throw new Exception("lỗi, số phải lớn hơn 0");
                         break;
                     case TypeCode.DateTime:
-                        var date = DateTime.TryParseExact(str, ["dd/MM/yyyy", "dd-MM-yyyy"], new CultureInfo("vi-VN"), DateTimeStyles.None, out DateTime t)?t:throw new Exception("lỗi, không đúng định dạng (phải là dd/MM/yyyy hoặc dd-MM-yyyy)");
+                        var date = DateTime.TryParseExact(str, ["dd/MM/yyyy", "dd-MM-yyyy"], new CultureInfo("vi-VN"), DateTimeStyles.None, out DateTime t) ? t : throw new Exception("lỗi, không đúng định dạng (phải là dd/MM/yyyy hoặc dd-MM-yyyy)");
                         i = date.Add(DateTime.Now.TimeOfDay); //để lấy giờ phút giây do bên trên chỉ lấy được ngày tháng năm
                         break;
                 }
