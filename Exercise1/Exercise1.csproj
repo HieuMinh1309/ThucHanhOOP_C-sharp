@@ -9,4 +9,8 @@
     <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="dao\" />
+  </ItemGroup>
+
 </Project>

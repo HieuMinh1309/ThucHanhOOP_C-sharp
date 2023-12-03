@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise1.Entity;
+namespace Exercise1.Model;
 public class Product
 {
     public string ProId { get; set; }
