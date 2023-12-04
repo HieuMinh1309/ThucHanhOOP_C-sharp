@@ -10,9 +10,6 @@ public class Valid<T>
 {
     public static T CheckCR(string message)
     {
-        Console.InputEncoding = Encoding.Unicode;
-        Console.OutputEncoding = Encoding.Unicode;
-
         Console.Write(message);
         var type = Type.GetTypeCode(typeof(T));
         var i = default(T);

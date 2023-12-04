@@ -13,47 +13,45 @@ public class Product
     public double ProPrice { get; set; }
     public int Quantity { get; set; }
     public DateTime ProMfg { get; set; }
+    public static List<Product> list { get; set; } = [];
 
-    public static List<Product> InputPro(List<Product> list)
+    public static List<Product> InputPro()
     {
         int amount = Valid<int>.CheckCR("Amount of product you want to input: ");
         for (int i = 0; i < amount; i++)
         {
+            Product product = new();
             Console.WriteLine($"Enter details for product #{i + 1}");
-            int id = Valid<int>.CheckCR("Id: ");
-            bool idExists = list.Any(product => product.ProId == id);
+            product.ProId = Valid<int>.CheckCR("Id: ");
+            bool idExists = list.Any(product1 => product1.ProId == product.ProId);
             while (idExists)
             {
                 Console.WriteLine("Id already exists. Please enter a different Id.");
-                id = Valid<int>.CheckCR("Id: ");
-                idExists = list.Any(product => product.ProId == id);
+                product.ProId = Valid<int>.CheckCR("Id: ");
+                idExists = list.Any(product1 => product1.ProId == product.ProId);
             }
-            string proname = Valid<string>.CheckCR("Product Name: ");
-            double proprice = Valid<double>.CheckCR("Product Price: ");
-            int quantity = Valid<int>.CheckCR("Quantity: ");
-            DateTime promfg = Valid<DateTime>.CheckCR("Manufacture: ");
+            product.ProName = Valid<string>.CheckCR("Product Name: ");
+            product.ProPrice = Valid<double>.CheckCR("Product Price: ");
+            product.Quantity = Valid<int>.CheckCR("Quantity: ");
+            product.ProMfg = Valid<DateTime>.CheckCR("Manufacture: ");
             Console.WriteLine("========================");
-            Product product = new()
-            {
-                ProId = id,
-                ProName = proname,
-                ProPrice = proprice,
-                Quantity = quantity,
-                ProMfg = promfg
-            };
+            
             list.Add(product);
         }
 
         return list;
     }
 
-    public static List<Product> OutPut(List<Product> list)
+    public static List<Product> OutPut()
     {
-        foreach(var product in list)
-        {
-            Console.WriteLine(product);
-        }
+        list.ForEach(Console.WriteLine);
         return list;
+    }
+
+    public void DeleteProduct()
+    {
+        int id = Valid<int>.CheckCR("Id to delete: ");
+        list.RemoveAll(p => p.ProId == id);
     }
 
     public override string ToString()
