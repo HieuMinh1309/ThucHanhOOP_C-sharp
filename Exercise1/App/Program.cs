@@ -1,3 +1,5 @@
-﻿using Exercise1.Valid;
-string so = Valid<string>.CheckCR("Vui lòng nhập: ");
-Console.WriteLine(so);
+﻿using Exercise1.Model;
+
+List<Product> pro = new();
+Product.InputPro(pro);
+Product.OutPut(pro);
