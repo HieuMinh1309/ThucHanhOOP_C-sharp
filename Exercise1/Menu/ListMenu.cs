@@ -20,6 +20,8 @@ public class ListMenu
             Console.WriteLine("1. Input Product");
             Console.WriteLine("2. Show List Product");
             Console.WriteLine("3. Delete By Id");
+            Console.WriteLine("4. Find Product by Id");
+            Console.WriteLine("5. Sort List");
             Console.WriteLine("Press any key to exit");
             Console.Write("Choose: ");
             string key =Console.ReadLine();
@@ -35,6 +37,12 @@ public class ListMenu
                 case "3":
                     list.ChangeColor(ConsoleColor.Black, ConsoleColor.Green);
                     list.DeleteProduct(); break;
+                case "4":
+                    list.ChangeColor(ConsoleColor.Black, ConsoleColor.Yellow);
+                    list.FindProduct(); break;
+                case "5":
+                    list.ChangeColor(ConsoleColor.Black, ConsoleColor.Magenta);
+                    list.SortProduct(); break;
                 default: loop = false; break;
             }
         }
